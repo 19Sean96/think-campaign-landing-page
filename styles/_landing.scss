@@ -1,0 +1,159 @@
+.landing {
+    min-height: 80vh;
+    max-height: 88vh;
+    height: 66vw;
+    position: relative;
+
+    &--statement {
+        position: relative;
+        z-index: 15;
+        margin-top: 15vh;
+        grid-column: 2/8;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &--title {
+            font-weight: bold;
+            margin-bottom: 0;
+            color: $black;
+            line-height: 1.1;
+
+        }
+        &--subtitle {
+            font-family: 'Gotham';
+            margin: 0;
+            color: $black;
+        }
+        @media screen and (max-width: 1625px) {
+            margin-top: 8vh;
+        }
+
+        @media screen and (max-width: 1325px) {
+            margin-top: 4vh;
+            grid-column: 2/12;
+            height: 27vh;
+        }
+        @media screen and (max-width: 850px) {
+            margin-top: 2vh;
+            height: 27vh;
+            text-align: center
+        }
+    }
+    &--catch {
+        color: $black;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 1325px) {
+            margin-right: 45%;
+        }
+        @media screen and (max-width: 850px) {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    }
+
+    &--cta {
+        padding: 11px 55px;
+        margin: 11px;
+        border-radius: 4px;
+        text-align: center;
+        font-family: 'Gotham';
+        font-weight: 500;
+        border: 3px solid $primary;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            #getStarted {
+                background-color: $primary;
+                color: $white-2;
+            }
+
+            #previousCampaigns {
+                position: relative;
+                color: $primary;
+                background-color: rgba($white, .95);
+
+            }
+        }
+
+        svg {
+            height: 21.5px;
+            margin: 0 0 -4px 4px;
+        }
+
+        @media screen and (max-width: 850px) {
+            &__container {
+                justify-content: center;
+            }
+        }
+    }
+
+    &--intersection {
+        max-width: 100%;
+        overflow-x: hidden;
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        transform: translateY(50%);
+        .wave {
+
+            width: 100vw;
+            min-width: 1240px;
+        }
+
+
+    }
+    .stripes {
+        width: 38vw;
+        max-width: 850px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-25%,65%);
+        z-index: 1;
+    }
+    &--images {
+        position: absolute;
+        bottom: 8.33vw;
+        right: 0;
+        max-width: 50vw;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        img {
+            width: 45%;
+        }
+        &__girl {
+            margin-bottom: 25px;
+        }
+
+        @media screen and (max-width: 1325px) {
+            width: 80vw;
+            max-width: none;
+            justify-content: space-around;
+
+            img {
+                max-width: 400px;
+            }
+            &__girl {
+                margin-bottom: -25px;
+            }
+            &__boy {
+                margin-bottom: -125px;
+            }
+        }
+        @media screen and (max-width: 950px) {
+            width: 90vw;
+
+            img {
+                max-width: 550px;
+            }
+
+            &__boy {
+                margin-bottom: -75px;
+            }
+        }
+    }
+}

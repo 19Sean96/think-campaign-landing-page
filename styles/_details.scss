@@ -1,0 +1,174 @@
+.details {
+    position: relative;
+    z-index: 3;
+    grid-column: 3/11;
+
+    &--title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-250%);
+        font-weight: bold;
+    }
+
+    &--steps {
+        padding-top: 100px;
+
+        &--cta {
+            position: absolute;
+            bottom: 0;
+            left: calc(60.07% - 43px);
+            transform: translateY(-350%);
+            &--link {
+                padding: 17.5px 62px;
+                font-family: 'Gotham', serif;
+                font-size: 28.13px;
+                color: $white-2;
+                background-color: $black;
+                border-radius: 4px;
+                box-shadow: 0 -11px 51px rgba(0,0,0,.16);
+
+                svg {
+                    height: 27.5px;
+                    margin: 0 0 -4px 16px;
+                    color: $secondary;
+                }
+            }
+        }
+
+    }
+
+    &--step {
+        position: relative;
+        padding: 43px;
+        width: 45.58%;
+        margin-top: -200px;
+        &--number {
+            position: relative;
+            z-index: 15;
+            position: absolute;
+            left: 0; top: 0;
+            margin: 0;
+            font-weight: bold;
+            transform: translate(50%,50%);
+
+        }
+        &--name {
+            position: relative;
+            z-index: 10;
+            font-weight: bold;
+            width: 95%;
+            background-color: $primary;
+            color: $white-2;
+            box-shadow: 0 4px 14px rgba(0,0,0,.2);
+            border-radius: 8px;
+            text-align: center;
+            line-height: 80px;
+            padding: 0 14px;
+        }
+        &--description {
+            position: relative;
+            z-index: 5;
+            background-color: $white;
+            box-shadow: 0 3px 75px rgba(0,0,0,.25);
+            border-radius: 8px;
+            padding: 78px 45px 37px 55px;
+            max-width: 86.5%;
+            margin-top: -86px;
+
+        }
+
+
+        &:nth-child(odd) {
+            margin-right: auto;
+            
+            h5 {
+                margin-left: auto;
+            }
+        }
+        &:nth-child(even) {
+            margin-left: auto;
+            position: relative;
+
+            h5 {
+                margin-left: -20px;
+            }
+        }
+
+        @media screen and (max-width: 1825px) {
+            width: 52%;
+
+            &--name {
+                font-size: 28.13px;
+            }
+            &--description {
+                font-size: 22.5px;
+            }
+        }
+        @media screen and (max-width: 1350px) {
+            width: 52%;
+
+            &--name {
+                font-size: 22.5px;
+                padding: 0 8px;
+                line-height: 60px;
+
+            }
+            &--description {
+                font-size: 18px;
+                margin-top: -72.5px;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            margin-top: -100px;
+            width: 66%;
+
+            &--number {
+                transform: translate(70%,70%);
+            }
+
+            &--description {
+                margin-top: -66px;
+
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            width: 100%;
+            &:nth-child(odd),
+            &:nth-child(even) {
+                margin-right: auto;
+                margin-left: auto;
+                h5 {
+                    margin-left: auto;
+                }
+            }
+
+            &--number {
+                left: 50%;
+                transform: translate(-50%,60%);
+            }
+
+            &--name {
+                width: 60%;
+                min-width: 280px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            &--description {
+                max-width: none;
+                width: 100%;
+                padding: 48px 45px 37px 55px;
+                margin-top: -56px;
+
+            }
+    
+        }
+
+    }
+
+    @media screen and (max-width: 1350px) {
+        grid-column: 2/12;
+    }
+
+}

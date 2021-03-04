@@ -1,0 +1,26 @@
+.header {
+    grid-column: 1/13;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--left {
+    }
+}
+
+.logo {
+    width: 250px;
+    min-height: 67.25px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &--local {
+        margin: 0;
+        text-align: right;
+        font-family: eurostile-extended, serif;
+        color: $black;
+    }
+}

@@ -1,0 +1,27 @@
+.nav {
+
+    &__local {
+        font-size: 22.5px;
+
+        .nav--item {
+            padding: 11px 58.4px;
+            margin-left: 40px;
+            position: relative;
+
+            svg {
+                height: 21.5px;
+                margin: 0 0 -4px 4px;
+            }
+            
+            &.filled-bg {
+                background-color: $black;
+                color: $white-2;
+                border-radius: 4px;
+            }
+            &.unfilled-bg {
+                color: $black;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,110 @@
+.form {
+    background-color: $white-2;
+    border-radius: 32px;
+    box-shadow: 0 -9px 20px rgba(0,0,0,.1);
+    padding: 110px 100px 60px 100px;
+    width: 100%;
+    &__wrapper {
+        grid-column: 4/10;
+        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+
+    &--title {
+        font-family: 'Gotham';
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    &--subtitle {
+        font-family: 'Gotham';
+        font-weight: 700;
+        margin-top: 0;
+        line-height: .9;
+
+    }
+
+    &--section {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &--input {
+        font-size: 22.5px;
+        padding: 20px 40px;
+        border-radius: 20px;
+        box-shadow: 0 -14px 26px rgba(0,0,0,.11);
+        border: none;
+        font-family: 'Gotham';
+        font-weight: 600;
+        &__wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Gotham';
+            font-weight: 700;
+            margin: 32.5px 20px;                                   
+
+        }
+
+        &--label {
+            font-size: 28.14px;
+            margin: 0 0 15px 10px;
+        }
+    }
+
+    select {
+        appearance: none;
+    }
+    .down {
+            width: 25px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(-75%,-40%);
+    }
+
+    &--submit {
+        font-size: 28.13px;
+        width: 33%;
+        font-family: 'Gotham';
+        font-weight: 600;
+        min-width: 200px;
+        border-radius: 4px;
+        background-color: $primary;
+        color: $white-2;
+        border: none;
+        padding: 17.5px 0;
+        box-shadow: 0 -22px 32px rgba(0,0,0,.12);
+        svg {
+            height: 20px;
+            color: $black;
+        }
+
+        &__wrapper {
+            margin: 22.5px 20px 32.5px;
+            display: flex;
+            flex-direction: column;                              
+        }
+    }
+
+    &--skip {
+        font-size: 22.5px;
+        font-family: 'Gotham';
+        font-weight: 600;
+        width: 75%;
+        text-align: left;
+        margin-top: 10px;
+        text-decoration: underline;
+        border: none;
+        color: $primary;
+    }
+
+    .full {
+        width: 100%;
+    }
+    .half {
+        width: 40%;
+    }
+}

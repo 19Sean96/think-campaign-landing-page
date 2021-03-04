@@ -1,0 +1,125 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gotham', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  min-height: 100vh;
+  background-color: $white;
+}
+html {
+  overflow-x: hidden;
+
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: eurostile-extended,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 68.66px;
+
+  @media screen and (max-width: 1450px) {
+    font-size: 54.9px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 43.95px
+  }
+}
+
+h2 {
+  font-family: eurostile-extended,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 54.9px;
+
+  @media screen and (max-width: 1450px) {
+    font-size: 43.95px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 35.16px;
+  }
+}
+
+h3 {
+  font-family: eurostile-extended,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 43.95px;
+
+  @media screen and (max-width: 1450px) {
+    font-size: 35.16px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 28.13px;
+  }
+}
+
+h4 {
+  font-family: 'Gotham', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35.16px;
+
+  @media screen and (max-width: 1450px) {
+    font-size: 28.13px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 22.5px;
+  }
+}
+
+h5 {
+  font-family: 'Gotham', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28.13px;
+
+  @media screen and (max-width: 1450px) {
+    font-size: 22.5px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 18px;
+  }
+}
+
+h6 {
+  font-family: 'Gotham', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22.5px;
+}
+
+p {
+  font-family: 'Gotham', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.content__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 2.5vw;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  column-gap: 28px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
