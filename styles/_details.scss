@@ -85,6 +85,11 @@
             h5 {
                 margin-left: auto;
             }
+
+            .details--step--number {
+                left: 100%;
+                transform: translate(-150%, 50%);
+            }
         }
         &:nth-child(even) {
             margin-left: auto;

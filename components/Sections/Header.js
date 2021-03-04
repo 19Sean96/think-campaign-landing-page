@@ -7,7 +7,7 @@ const Header = (props) => {
 			<header className="header">
 				<div className="header--left">
 					<div className="logo__container">
-						<ThinkLogo />
+						<ThinkLogo color="3e3e3e"/>
 						<h6 className="logo--local">Campaigns</h6>
 					</div>
 				</div>

@@ -14,7 +14,8 @@
         flex-direction: column;
         justify-content: space-between;
         &--title {
-            font-weight: bold;
+            font-weight: 700;
+            font-family: 'Gotham', serif;
             margin-bottom: 0;
             color: $black;
             line-height: 1.1;
