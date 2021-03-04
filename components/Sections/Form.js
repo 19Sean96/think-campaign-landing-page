@@ -207,7 +207,12 @@ function Part2({ register, setFormSection }) {
 					id="campaignPurpose"
 				/>
 			</div>
-			
+            <div className="form--submit__wrapper full">
+				<button className="form--submit" onClick={() => setFormSection(3)}>
+					2/4 <FontAwesomeIcon icon="arrow-right" />
+				</button>
+                <button className="form--skip capitalize">or answer the rest later - we'll reach out!</button>
+			</div>
 		</div>
 	);
 }
