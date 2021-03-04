@@ -14,10 +14,10 @@ const Form = (props) => {
 	return (
 		<Container>
 			<div className="form__wrapper">
-				<h1 className="form--title capitalize">start your campaign!</h1>
-				<h2 className="form--subtitle capitalize">
+				<h2 className="form--title capitalize">start your campaign!</h2>
+				<h3 className="form--subtitle capitalize">
 					we just need a few details to get started.
-				</h2>
+				</h3>
 				<form onSubmit={handleSubmit(onSubmit)} className="form">
 					{formSection === 1 ? (
 						<Part1
