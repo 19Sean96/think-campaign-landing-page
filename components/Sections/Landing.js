@@ -30,7 +30,7 @@ const Landing = (props) => {
 									get started <FontAwesomeIcon icon="chart-bar" />
 								</a>
 							</Link>
-							<Link href="#">
+							<Link href="https://www.thinkpro.net/campaigns/previous-campaigns/">
 								<a
 									className="landing--cta capitalize"
 									id="previousCampaigns"

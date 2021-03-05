@@ -27,14 +27,14 @@ export default async (req, res) => {
 		},
 	});
     const to = [
-        "1996.sean.alexander@gmail.com",
-        // "tommy@thinkpro.net"
+        "webninja@thinkpro.net",
+        "tommy@thinkpro.net"
     ]
 
 	let info = {
 			from: EMAIL_NAME,
 			to: to,
-			subject: "CAMPAIGN TEST EMAIL", // Subject line
+			subject: "NEW CAMPAIGN REQUEST (2.0)", // Subject line
 			// text: "Hello world?", // plain text body
 			html: `<div>
                 <h1>New Campaign Request</h1>
