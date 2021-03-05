@@ -55,14 +55,14 @@ const Details = (props) => {
 						);
 					})}
 				</div>
-				<div className="details--steps--cta">
+				{/* <div className="details--steps--cta">
 					<Link href="/#form">
 						<a className="details--steps--cta--link capitalize">
 							start getting paid
 							<FontAwesomeIcon icon="chart-bar" />
 						</a>
 					</Link>
-				</div>
+				</div> */}
 			</main>
 		</Container>
 	);

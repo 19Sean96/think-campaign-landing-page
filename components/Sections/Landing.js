@@ -13,9 +13,9 @@ const Landing = (props) => {
 						<h2 className="landing--statement--title capitalize">
 							earn money & boost your brand or help a cause!
 						</h2>
-						<h4 className="landing--statement--subtitle capitalize">
+						<h5 className="landing--statement--subtitle capitalize">
 						THINK CAMPAIGNS offer you a risk-free way to earn extra revenue and brand awareness by helping you launch a t-shirt campaign. It's easy and there's no cost to you!
-						</h4>
+						</h5>
 					</div>
 					<div className="landing--statement__bottom">
 						{/* <h5 className="landing--catch capitalize">

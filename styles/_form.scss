@@ -2,7 +2,7 @@
     background-color: $white-2;
     border-radius: 32px;
     box-shadow: 0 -9px 20px rgba(0,0,0,.1);
-    padding: 80px 85px 60px 85px;
+    padding: 0px 85px 60px 85px;
     width: 100%;
     transition: .33s all ease-in;
     position: relative;
@@ -20,19 +20,23 @@
     &__wrapper {
         grid-column: 4/10;
         margin-bottom: 200px;
-        margin-top: 150px;
+        margin-top: 0px;
     }
 
     &--title {
         font-family: 'Gotham';
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 0;
+        color: $black;
+        text-align: center;
     }
     &--subtitle {
         font-family: 'Gotham';
-        font-weight: 700;
-        margin-top: 0;
+        font-weight: 400;
+        margin-top: 15px;
         line-height: .9;
+        color: $black;
+        text-align: center;
 
     }
 
