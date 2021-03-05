@@ -1,5 +1,5 @@
 .details {
-    margin-top: 45px;
+    margin-top: 45px; margin-bottom: 25px;
     position: relative;
     z-index: 3;
     grid-column: 3/11;
@@ -14,12 +14,10 @@
 
     &--steps {
         padding-top: 150px;
-
+        flex-direction: column;
         &--cta {
-            position: absolute;
-            bottom: 0;
-            left: calc(60.07% - 43px);
-            transform: translateY(-350%);
+            text-align: center;
+
             &--link {
                 padding: 17.5px 62px;
                 font-family: 'Gotham', serif;
@@ -41,8 +39,6 @@
         @media screen and (max-width: 1825px) {
 
             &--cta {
-                left: calc(60.07% - 86px);
-                transform: translateY(-375%);
 
                 &--link {
                     font-size: 22.5px;
@@ -54,7 +50,7 @@
             }
         }
         @media screen and (max-width: 1000px) {
-            padding-top: 50px;
+            // padding-top: 50px;
             &--cta {
                 position: static;
                 transform: translateY(-75%);
@@ -75,8 +71,53 @@
     &--step {
         position: relative;
         padding: 43px;
-        width: 45.58%;
+        // width: 45.58%;
         margin-top: -200px;
+
+
+        &--img {
+            width: 64%;
+
+            // box-shadow: 0 7px 22px rgba(0,0,0,.2);
+
+            -webkit-filter: drop-shadow(0px 7px 25px rgba(0,0,0,0.2));
+            filter: url(#drop-shadow);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#C3C3C3')";
+            filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#C3C3C3')";
+
+            &__wrapper {
+                position: relative;
+                // width: 60%;
+                display: flex;
+                margin: 2px 0;
+                #rocket {
+                    position: absolute;
+                    z-index: 250;
+                    width: 3.8vw;
+                    max-width: 95px;
+                    top: 1vw;
+                    left: .5vw;
+                    transform: translate(25%, 25%);
+                }
+
+                .shadow {
+                    width: 0;
+                    position: absolute;
+                }
+
+            }
+            &__left {
+                justify-content: flex-start;
+                margin-left: 45px;
+            }
+            &__right {
+                justify-content: flex-end;
+                margin-right: 45px;
+
+            }
+        }
+
+
         &--number {
             position: relative;
             z-index: 15;
@@ -140,7 +181,6 @@
         }
 
         @media screen and (max-width: 1825px) {
-            width: 52%;
 
             &--name {
                 font-size: 22.5px;
@@ -154,7 +194,6 @@
             }
         }
         @media screen and (max-width: 1350px) {
-            width: 52%;
 
             &--name {
                 font-size: 22.5px;
@@ -168,15 +207,13 @@
             }
         }
         @media screen and (max-width: 1000px) {
-            margin-top: -100px;
-            width: 66%;
 
             &--number {
                 transform: translate(70%,70%);
             }
 
             &--description {
-                margin-top: -66px;
+                // margin-top: -66px;
 
             }
             &:nth-child(odd) {
@@ -195,7 +232,6 @@
         }
 
         @media screen and (max-width: 750px) {
-            width: 100%;
             &:nth-child(odd),
             &:nth-child(even) {
                 margin-right: auto;
