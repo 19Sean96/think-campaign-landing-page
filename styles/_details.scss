@@ -121,7 +121,7 @@
                 &__wrapper {
 
                     #rocket {
-                        width: 5.2vw;
+                        width: 69px;
                     }
                 }
             }
@@ -130,6 +130,10 @@
 
                 &__wrapper {
                     margin: 18px 0;
+
+                    #rocket {
+                        width: 56px;
+                    }
                 }
             }
             @media screen and (max-width: 650px) {
@@ -137,6 +141,10 @@
 
                 &__wrapper {
                     margin: 24px 0;
+                    
+                    #rocket {
+                        width: 49px;
+                    }
                 }
             }
             @media screen and (max-width: 475px) {
@@ -144,6 +152,10 @@
 
                 &__wrapper {
                     margin: 32px 0;
+                    
+                    #rocket {
+                        width: 33px;
+                    }
                 }
             }
         }
