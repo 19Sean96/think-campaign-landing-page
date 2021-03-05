@@ -8,6 +8,7 @@
         left: 0;
         transform: translate(0,-150%);
         font-weight: bold;
+        color: $black;
     }
 
     &--steps {
@@ -82,7 +83,7 @@
             left: 0; top: 0;
             margin: 0;
             font-weight: bold;
-            transform: translate(50%,50%);
+            color: $black;
 
         }
         &--name {
@@ -120,7 +121,7 @@
 
             .details--step--number {
                 left: 100%;
-                transform: translate(-150%, 50%);
+                transform: translate(-200%, 50%);
             }
         }
         &:nth-child(even) {
@@ -129,6 +130,11 @@
 
             h5 {
                 margin-left: -20px;
+            }
+
+            .details--step--number {
+                transform: translate(50%,50%);
+
             }
         }
 
@@ -172,6 +178,19 @@
                 margin-top: -66px;
 
             }
+            &:nth-child(odd) {
+
+                .details--step--number {
+                    transform: translate(-225%, 80%);
+                }
+            }
+            &:nth-child(even) {
+
+                .details--step--number {
+                    transform: translate(75%,75%);
+                }
+            }
+            
         }
 
         @media screen and (max-width: 750px) {
@@ -188,6 +207,7 @@
                     transform: translate(-50%, 70%);
                 }
             }
+
 
             &--name {
                 width: 60%;

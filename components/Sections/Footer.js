@@ -83,7 +83,10 @@ const Footer = (props) => {
 					</div>
 				</div>
 			</Container>
-			<Intersection3 />
+			<div className="footer--intersection">
+				<Intersection3 />
+			</div>
+
 		</footer>
 	);
 };

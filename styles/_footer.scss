@@ -1,16 +1,19 @@
 .footer {
     width: 100vw;
-    height: 425px;
+    height: 525px;
     background-color: $black;
     position: relative;
     margin-top: 40px;
     padding-top: 50px;
     padding-bottom: 40px;
+    // overflow-x: hidden;
+
 
     &--wave {
         position:absolute;
-        top: 0; left: 0;
+        top: 0; right: 0;
         transform: translateY(-98%);
+        min-width: 1240px;
     }
     &--content {
         position: relative;
@@ -38,9 +41,9 @@
     }
 
     &--social {
-        width: 48px;
+        width: 42px;
         color: $primary;
-        margin: 12px;
+        margin: 12px 48px 24px 0;
         svg {
             width: 100%;
         }
