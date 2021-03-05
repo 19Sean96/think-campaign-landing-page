@@ -1,5 +1,5 @@
 import Container from "../Container";
-import Intersection1 from "../Intersections/Details";
+import Intersection1 from "../Intersections/Jagged1";
 import StripesLeftToRight from '../Patterns/StripesLeftToRight'
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -58,7 +58,7 @@ const Landing = (props) => {
 			<div className="landing--intersection">
 				<Intersection1 />
 			</div>
-            <StripesLeftToRight />
+            {/* <StripesLeftToRight /> */}
 
 		</section>
 	);

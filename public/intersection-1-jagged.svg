@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1238" viewBox="0 0 1920 1238">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_152" data-name="Rectangle 152" width="1920" height="1238" transform="translate(-19911 2196)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="intersection-1-jagged" transform="translate(19911 -2196)" clip-path="url(#clip-path)">
+    <g id="Group_126" data-name="Group 126" transform="translate(-34 -333)">
+      <g id="stripes-1" transform="translate(-19418.322 3963.971) rotate(-107)">
+        <line id="Line_13" data-name="Line 13" x1="550.046" y2="550.903" transform="translate(-12.533 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_15" data-name="Line 15" x1="550.046" y2="550.903" transform="translate(-63.939 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_18" data-name="Line 18" x1="550.046" y2="550.903" transform="translate(39.061 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_17" data-name="Line 17" x1="550.046" y2="550.903" transform="translate(90.467 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_14" data-name="Line 14" x1="550.046" y2="550.903" transform="translate(-37.381 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_16" data-name="Line 16" x1="550.046" y2="550.903" transform="translate(-90.5 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_19" data-name="Line 19" x1="550.046" y2="550.903" transform="translate(65.619 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_20" data-name="Line 20" x1="550.046" y2="550.903" transform="translate(12.5 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+      </g>
+      <g id="stripes-1-2" data-name="stripes-1" transform="translate(-19667.5 4465.037) rotate(-167)">
+        <line id="Line_13-2" data-name="Line 13" x1="313.412" y2="313.901" transform="translate(-46.075 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_15-2" data-name="Line 15" x1="313.412" y2="313.901" transform="translate(-75.366 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_18-2" data-name="Line 18" x1="313.412" y2="313.901" transform="translate(-16.677 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_17-2" data-name="Line 17" x1="313.412" y2="313.901" transform="translate(12.614 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_14-2" data-name="Line 14" x1="313.412" y2="313.901" transform="translate(-60.233 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_16-2" data-name="Line 16" x1="313.412" y2="313.901" transform="translate(-90.5 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_19-2" data-name="Line 19" x1="313.412" y2="313.901" transform="translate(-1.544 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+        <line id="Line_20-2" data-name="Line 20" x1="313.412" y2="313.901" transform="translate(-31.811 967.597)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="5"/>
+      </g>
+      <g id="Group_125" data-name="Group 125" transform="translate(-19953.469 2589.102)">
+        <path id="wave_5_" data-name="wave (5)" d="M1920-47.873,1680,90.96,1440,30.552l-240,74.988L960,314.47,720,186.524,535.315,327.8,240,399.766,0,271.821V442.415H1920Z" transform="translate(0 47.873)" fill="none" stroke="#3e3e3e" stroke-width="4"/>
+        <path id="wave_6_" data-name="wave (6)" d="M0,318.7,160,426.484,320,209.573l160,88.966L640,477.116,800,308.142l160-18.833,160-79.735,160,198.193,160-237.173,160,61.333,160,194.557,160-127.945V0H0Z" transform="translate(0 486.702)" fill="none" stroke="#3e3e3e" stroke-width="4"/>
+      </g>
+      <g id="Group_124" data-name="Group 124" transform="translate(-19877.5 2637.081)">
+        <path id="wave_5_2" data-name="wave (5)" d="M1920-47.873,1680,90.96,1440,30.552l-240,74.988L960,314.47,687.754,167.4,522.4,298.68,240,346.584,0,271.821V442.415H1920Z" transform="translate(0 47.873)" fill="#20a9af"/>
+        <path id="wave_6_2" data-name="wave (6)" d="M0,318.7,160,426.484,320,209.573l160,88.966L640,477.116,800,308.142l160-18.833,160-79.735,160,198.193,160-237.173,160,61.333,160,194.557,160-127.945V0H0Z" transform="translate(0 486.702)" fill="#20a9af"/>
+      </g>
+    </g>
+  </g>
+</svg>

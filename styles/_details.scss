@@ -6,12 +6,12 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(0,-250%);
+        transform: translate(0,-150%);
         font-weight: bold;
     }
 
     &--steps {
-        padding-top: 100px;
+        padding-top: 150px;
 
         &--cta {
             position: absolute;
@@ -52,7 +52,7 @@
             }
         }
         @media screen and (max-width: 1000px) {
-
+            padding-top: 50px;
             &--cta {
                 position: static;
                 transform: translateY(-75%);

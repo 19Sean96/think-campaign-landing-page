@@ -4,11 +4,13 @@
     background-color: $black;
     position: relative;
     margin-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 40px;
 
     &--wave {
         position:absolute;
         top: 0; left: 0;
-        transform: translateY(-80%);
+        transform: translateY(-98%);
     }
     &--content {
         position: relative;
