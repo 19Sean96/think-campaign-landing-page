@@ -77,7 +77,7 @@
 
         &--img {
             width: 64%;
-
+            min-width: 550px;
             // box-shadow: 0 7px 22px rgba(0,0,0,.2);
 
             -webkit-filter: drop-shadow(0px 7px 25px rgba(0,0,0,0.2));
@@ -114,6 +114,37 @@
                 justify-content: flex-end;
                 margin-right: 45px;
 
+            }
+
+            @media screen and (max-width: 1350px) {
+
+                &__wrapper {
+
+                    #rocket {
+                        width: 5.2vw;
+                    }
+                }
+            }
+            @media screen and (max-width: 1025px) {
+                min-width: 450px;
+
+                &__wrapper {
+                    margin: 18px 0;
+                }
+            }
+            @media screen and (max-width: 650px) {
+                min-width: 375px;
+
+                &__wrapper {
+                    margin: 24px 0;
+                }
+            }
+            @media screen and (max-width: 475px) {
+                min-width: 255px;
+
+                &__wrapper {
+                    margin: 32px 0;
+                }
             }
         }
 
