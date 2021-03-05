@@ -2,17 +2,17 @@ const Intersection1 = () => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			class="wave"
-			viewBox="0 0 1920 648"
+			className="wave"
+			viewBox="0 0 1920 662"
 		>
 			<defs>
-				<clipPath id="clipPath">
+				<clipPath id="clipPath1">
 					<rect
 						id="Rectangle_158"
 						dataname="Rectangle 158"
 						width="1920"
-						height="648"
-						transform="translate(-22252 1696.435)"
+						height="662"
+						transform="translate(-22252 1682.435)"
 						fill="#fff"
 						stroke="#707070"
 						strokeWidth="1"
@@ -21,8 +21,8 @@ const Intersection1 = () => {
 			</defs>
 			<g
 				id="intersection-1-simple"
-				transform="translate(22252 -1696.435)"
-				clipPath="url(#clipPath)"
+				transform="translate(22252 -1682.435)"
+				clipPath="url(#clipPath1)"
 			>
 				<g
 					id="intersection-1-simple-2"
