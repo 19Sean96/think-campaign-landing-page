@@ -42,16 +42,8 @@ export default async (req, res) => {
                 <li><strong>Customer's Name:</strong> ${name}</li>
                 <li><strong>Customer's Email:</strong> ${email}</li>
                 <li><strong>Customer's Phone:</strong> ${phone}</li>
-                <li><strong>Campaign Name:</strong> ${campaignName}</li>
                 <li><strong>Sales Goal:</strong> ${quantity}</li>
                 <li><strong>Cause For Campaign:</strong> ${cause}</li>
-                <li><strong>Campaign Intro/Tagline:</strong> ${campaignIntro}</li>
-                <li><strong>Campaign Purpose:</strong> ${campaignPurpose}</li>
-                <li><strong>Campaign Explanation:</strong> ${campaignExplanation}</li>
-                <li><strong>Shirt Choice:</strong> ${shirtChoice}</li>
-                <li><strong>Color Choice:</strong> ${colorChoice}</li>
-                <li><strong>Comments, Questions & Concerns:</strong> ${additionalComments}</li>
-
                 </ul>
               </div>`,
 		};
@@ -67,3 +59,23 @@ export default async (req, res) => {
         }
     })
 };
+
+
+{/* <div>
+                <h1>New Campaign Request</h1>
+                <ul>
+                <li><strong>Customer's Name:</strong> ${name}</li>
+                <li><strong>Customer's Email:</strong> ${email}</li>
+                <li><strong>Customer's Phone:</strong> ${phone}</li>
+                <li><strong>Campaign Name:</strong> ${campaignName}</li>
+                <li><strong>Sales Goal:</strong> ${quantity}</li>
+                <li><strong>Cause For Campaign:</strong> ${cause}</li>
+                <li><strong>Campaign Intro/Tagline:</strong> ${campaignIntro}</li>
+                <li><strong>Campaign Purpose:</strong> ${campaignPurpose}</li>
+                <li><strong>Campaign Explanation:</strong> ${campaignExplanation}</li>
+                <li><strong>Shirt Choice:</strong> ${shirtChoice}</li>
+                <li><strong>Color Choice:</strong> ${colorChoice}</li>
+                <li><strong>Comments, Questions & Concerns:</strong> ${additionalComments}</li>
+
+                </ul>
+              </div> */}

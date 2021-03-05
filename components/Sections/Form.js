@@ -59,7 +59,7 @@ const Form = ({ sendConfirmationEmail, emailSuccess }) => {
 								errors={errors}
 								failedSubmitAttempt={failedSubmitAttempt}
 							/>
-							<Part2
+							{/* <Part2
 								register={register}
 								setFormSection={setFormSection}
 								handleSubmit={handleSubmit}
@@ -79,7 +79,7 @@ const Form = ({ sendConfirmationEmail, emailSuccess }) => {
 								handleSubmit={handleSubmit}
 								onSubmit={onSubmit}
 								visible={formSection === 4}
-							/>
+							/> */}
 						</>
 					) : (
 						<Success />
@@ -244,18 +244,18 @@ function Part1({
 			<div className="form--submit__wrapper full">
 				<button
 					type="submit"
-					className="form--skip capitalize"
+					className="form--submit capitalize"
 					onClick={handleSubmit(onSubmit)}
 				>
-					finish later
+					start campaign
 				</button>
-				<button
+				{/* <button
 					type="button"
 					className="form--submit capitalize"
 					onClick={() => setFormSection(2)}
 				>
 					next <FontAwesomeIcon icon="arrow-right" />
-				</button>
+				</button> */}
 			</div>
 		</div>
 	);
