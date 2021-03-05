@@ -26,12 +26,16 @@ export default async (req, res) => {
 			pass: EMAIL_PW,
 		},
 	});
+    const to = [
+        "1996.sean.alexander@gmail.com",
+        // "tommy@thinkpro.net"
+    ]
 
 	let info = {
 			from: EMAIL_NAME,
-			to: "1996.sean.alexander@gmail.com",
-			subject: "Hello ✔", // Subject line
-			text: "Hello world?", // plain text body
+			to: to,
+			subject: "CAMPAIGN TEST EMAIL", // Subject line
+			// text: "Hello world?", // plain text body
 			html: `<div>
                 <h1>New Campaign Request</h1>
                 <ul>
@@ -39,6 +43,7 @@ export default async (req, res) => {
                 <li><strong>Customer's Email:</strong> ${email}</li>
                 <li><strong>Customer's Phone:</strong> ${phone}</li>
                 <li><strong>Campaign Name:</strong> ${campaignName}</li>
+                <li><strong>Sales Goal:</strong> ${quantity}</li>
                 <li><strong>Cause For Campaign:</strong> ${cause}</li>
                 <li><strong>Campaign Intro/Tagline:</strong> ${campaignIntro}</li>
                 <li><strong>Campaign Purpose:</strong> ${campaignPurpose}</li>
@@ -57,7 +62,8 @@ export default async (req, res) => {
             res.json(err)
         } else {
             console.log('EMAIL SENT SUCCESSFULLY');
-            res.json(data)
+
+            res.json({success: true})
         }
     })
 };

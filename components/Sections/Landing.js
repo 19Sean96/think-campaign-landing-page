@@ -11,20 +11,18 @@ const Landing = (props) => {
 				<div className="landing--statement">
 					<div className="landing--statement__top">
 						<h2 className="landing--statement--title capitalize">
-							promote your brand with $0 down.
+							earn money & boost your brand or help a cause!
 						</h2>
-						<h3 className="landing--statement--subtitle capitalize">
-							plus make some money along the way with a custom
-							t-shirt campaign.
-						</h3>
+						<h4 className="landing--statement--subtitle capitalize">
+						THINK CAMPAIGNS offer you a risk-free way to earn extra revenue and brand awareness by helping you launch a t-shirt campaign. It's easy and there's no cost to you!
+						</h4>
 					</div>
 					<div className="landing--statement__bottom">
-						<h4 className="landing--catch capitalize">
-							since there's no initial investment, there's no
-							risk. what are you waiting for?
-						</h4>
+						{/* <h5 className="landing--catch capitalize">
+							THINK CAMPAIGNS offer you a risk-free way to earn extra revenue and brand awareness by helping you launch a t-shirt campaign. It's easy and there's no cost to you!
+						</h5> */}
 						<div className="landing--cta__container">
-							<Link href="#">
+							<Link href="/#form">
 								<a
 									className="landing--cta capitalize"
 									id="getStarted"

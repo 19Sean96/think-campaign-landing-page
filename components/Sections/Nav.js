@@ -8,7 +8,7 @@ const GlobalNav = (props) => {
 const LocalNav = (props) => {
 	return (
 		<nav className="nav nav__local">
-			<Link href="#">
+			<Link href="/#form">
 				<a className="nav--item capitalize filled-bg">
 					start your campaign <FontAwesomeIcon icon="chart-bar" />
 				</a>

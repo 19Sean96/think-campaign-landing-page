@@ -6,7 +6,11 @@ import Details from '../components/Sections/Details'
 import Testimonials from '../components/Sections/Testimonials'
 import Form from '../components/Sections/Form'
 import Footer from '../components/Sections/Footer'
+
+import { useState } from 'react'
 export default function Home() {
+
+  const [emailSuccess, setEmailSuccess] = useState(false)
 
   const sendConfirmationEmail = async (data) => {
     const res = await fetch('/api/sendConfirmation', {
@@ -14,6 +18,11 @@ export default function Home() {
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify(data),
     })
+    const response = await res.json(res)
+    console.log(response);
+    if (response.success) {
+      setEmailSuccess(true)
+    }
   }
   return (
     <div className="container">
@@ -48,7 +57,7 @@ export default function Home() {
       <Landing />
       <Details />
       {/* <Testimonials /> */}
-      <Form sendConfirmationEmail={sendConfirmationEmail}/>
+      <Form sendConfirmationEmail={sendConfirmationEmail} emailSuccess={emailSuccess}/>
       <Footer />
     </div>
   )

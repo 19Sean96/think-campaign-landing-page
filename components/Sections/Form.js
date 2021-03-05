@@ -4,21 +4,24 @@ import Container from "../Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NumberFormat from "react-number-format";
 
-const Form = ({ sendConfirmationEmail }) => {
-	const { register, handleSubmit, watch, control } = useForm();
+const Form = ({ sendConfirmationEmail, emailSuccess }) => {
+	const { register, handleSubmit, watch, control, errors } = useForm();
 	const [formSection, setFormSection] = useState(1);
 	const [emailValid, validateEmail] = useState(false);
 	const [phoneValid, validatePhone] = useState(false);
 	const [nameValid, validateName] = useState(false);
+	const [failedSubmitAttempt, setFailedSubmitAttempt] = useState(false);
 	const [file, setFile] = useState(null);
 
-	const [minimumSatisfied, setMinimumSatisfied] = useState(false);
 	const watchInputs = watch();
 
 	const onSubmit = (data) => {
 		console.log(JSON.stringify(data));
 		if (emailValid && phoneValid && nameValid) {
+			setFailedSubmitAttempt(false);
 			sendConfirmationEmail(data);
+		} else {
+			setFailedSubmitAttempt(true);
 		}
 	};
 
@@ -36,43 +39,52 @@ const Form = ({ sendConfirmationEmail }) => {
 
 	return (
 		<Container>
-			<div className="form__wrapper">
+			<div className="form__wrapper" id="form">
 				<h2 className="form--title capitalize">start your campaign!</h2>
 				<h3 className="form--subtitle capitalize">
 					we just need a few details to get started.
 				</h3>
 				<form onSubmit={handleSubmit(onSubmit)} className="form">
-					<Part1
-						register={register}
-						setFormSection={setFormSection}
-						emailIsValid={emailIsValid}
-						handleSubmit={handleSubmit}
-						onSubmit={onSubmit}
-						visible={formSection === 1}
-						control={control}
-					/>
-					<Part2
-						register={register}
-						setFormSection={setFormSection}
-						handleSubmit={handleSubmit}
-						onSubmit={onSubmit}
-						visible={formSection === 2}
-					/>
-					<Part3
-						register={register}
-						setFormSection={setFormSection}
-						handleSubmit={handleSubmit}
-						onSubmit={onSubmit}
-						visible={formSection === 3}
-					/>
-					<Part4
-						register={register}
-						setFormSection={setFormSection}
-						handleSubmit={handleSubmit}
-						onSubmit={onSubmit}
-						visible={formSection === 4}
-					/>
-					<Success />
+					{!emailSuccess ? (
+						<>
+							<Part1
+								register={register}
+								setFormSection={setFormSection}
+								emailIsValid={emailIsValid}
+								phoneIsValid={phoneIsValid}
+								handleSubmit={handleSubmit}
+								onSubmit={onSubmit}
+								visible={formSection === 1}
+								control={control}
+								errors={errors}
+								failedSubmitAttempt={failedSubmitAttempt}
+							/>
+							<Part2
+								register={register}
+								setFormSection={setFormSection}
+								handleSubmit={handleSubmit}
+								onSubmit={onSubmit}
+								visible={formSection === 2}
+							/>
+							<Part3
+								register={register}
+								setFormSection={setFormSection}
+								handleSubmit={handleSubmit}
+								onSubmit={onSubmit}
+								visible={formSection === 3}
+							/>
+							<Part4
+								register={register}
+								setFormSection={setFormSection}
+								handleSubmit={handleSubmit}
+								onSubmit={onSubmit}
+								visible={formSection === 4}
+							/>
+						</>
+					) : (
+						<Success />
+					)}
+
 				</form>
 			</div>
 		</Container>
@@ -83,10 +95,12 @@ function Part1({
 	register,
 	setFormSection,
 	emailIsValid,
+	phoneIsValid,
 	handleSubmit,
 	onSubmit,
 	visible,
 	control,
+	errors,
 }) {
 	return (
 		<div
@@ -103,11 +117,16 @@ function Part1({
 				</label>
 				<input
 					name="name"
-					ref={register}
+					ref={register({
+						required: true,
+					})}
 					type="text"
 					className="form--input"
 					id="name"
 				/>
+				{errors.name && errors.name.type === "required" && (
+					<span role="alert">This is required</span>
+				)}
 			</div>
 			<div className="form--input__wrapper full">
 				<label
@@ -121,7 +140,9 @@ function Part1({
 					name="phone"
 					defaultValue=""
 					id="phone"
-					ref={register}
+					ref={register({
+						required: true,
+					})}
 					className="form--input"
 					render={({ onChange, onBlur, value, name, id, ref }) => (
 						<NumberFormat
@@ -138,6 +159,9 @@ function Part1({
 						/>
 					)}
 				/>
+				{!phoneIsValid && failedSubmitAttempt && (
+					<span role="alert">Please enter a valid phone number</span>
+				)}
 				{/* <input
           name="lastName"
           ref={register}
@@ -155,11 +179,17 @@ function Part1({
 				</label>
 				<input
 					name="email"
-					ref={register}
+					ref={register({
+						required: true,
+					})}
 					type="email"
 					className="form--input"
 					id="email"
 				/>
+
+				{!phoneIsValid && failedSubmitAttempt && (
+					<span role="alert">Please enter a valid email</span>
+				)}
 			</div>
 			<div className="form--input__wrapper half">
 				<label
@@ -194,7 +224,7 @@ function Part1({
 					htmlFor="quantity"
 					className="form--input--label capitalize"
 				>
-					quantity:
+					sales goal:
 				</label>
 				<select
 					ref={register}
@@ -302,6 +332,9 @@ function Part2({ register, setFormSection, handleSubmit, onSubmit, visible }) {
 					next <FontAwesomeIcon icon="arrow-right" />
 				</button>
 			</div>
+			<a className="form--back" onClick={() => setFormSection(1)}>
+				Go Back
+			</a>
 		</div>
 	);
 }
@@ -348,6 +381,9 @@ function Part3({ register, setFormSection, handleSubmit, onSubmit, visible }) {
 					next <FontAwesomeIcon icon="arrow-right" />
 				</button>
 			</div>
+			<a className="form--back" onClick={() => setFormSection(1)}>
+				Go Back
+			</a>
 		</div>
 	);
 }
@@ -465,11 +501,22 @@ function Part4({ register, setFormSection, handleSubmit, onSubmit, visible }) {
 					complete <FontAwesomeIcon icon="arrow-right" />
 				</button>
 			</div>
+			<a className="form--back" onClick={() => setFormSection(1)}>
+				Go Back
+			</a>
 		</div>
 	);
 }
 
 function Success(props) {
-	return <div className="success form--section"></div>;
+	return (
+		<div className="success form--section">
+			<h6>Your Information Has Been Submitted!</h6>
+			<p>
+				A specialist will reach out via phone/email to initiate your
+				project.
+			</p>
+		</div>
+	);
 }
 export default Form;

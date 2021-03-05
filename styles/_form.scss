@@ -7,6 +7,16 @@
     transition: .33s all ease-in;
     position: relative;
     z-index: 50;
+
+    .success {
+        text-align: center;
+
+        h6,p {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
     &__wrapper {
         grid-column: 4/10;
         margin-bottom: 200px;
@@ -55,6 +65,13 @@
             font-size: 28.14px;
             margin: 0 0 15px 10px;
         }
+    }
+    &--back {
+        text-decoration: underline;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
     }
 
     select {
@@ -206,6 +223,14 @@
         }
         .full {
             width: 90%;
+        }
+        &--title {
+            font-size: 28.13px;
+            margin-bottom: 10px;
+        }
+        &--subtitle {
+            font-size: 22.5px;
+    
         }
         &--input {
             font-size: 18px;
