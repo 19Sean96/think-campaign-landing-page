@@ -1,19 +1,28 @@
-import { useForm } from "react-hook-form";
+import { useForm, Controller, ErrorMessage } from "react-hook-form";
 import { useState, useEffect } from "react";
 import Container from "../Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import NumberFormat from 'react-number-format'
 
-const Form = (props) => {
-  const { register, handleSubmit } = useForm();
+const Form = ({ sendConfirmationEmail }) => {
+  const { register, handleSubmit, watch, control } = useForm();
   const [formSection, setFormSection] = useState(1);
   const [emailValid, setEmailValid] = useState(null);
-  const onSubmit = (data) => console.log(JSON.stringify(data));
+  const [ minimumSatisfied, setMinimumSatisfied ] = useState(false)
+  const watchInputs = watch();
+
+  const onSubmit = (data) => {
+    console.log(JSON.stringify(data));
+    sendConfirmationEmail(data);
+  };
 
   const emailIsValid = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   useEffect(() => {
-    // handleSubmit(onSubmit)
-  });
+	  console.log(watchInputs)
+	  console.log(emailIsValid(watchInputs.email))
+
+  }, [watchInputs]);
 
   return (
     <Container>
@@ -23,32 +32,37 @@ const Form = (props) => {
           we just need a few details to get started.
         </h3>
         <form onSubmit={handleSubmit(onSubmit)} className="form">
-          {formSection === 1 ? (
-            <Part1
-              register={register}
-              setFormSection={setFormSection}
-              emailIsValid={emailIsValid}
-              handleSubmit={(handleSubmit, onSubmit)}
-            />
-          ) : formSection === 2 ? (
-            <Part2
-              register={register}
-              setFormSection={setFormSection}
-              emailIsValid={emailIsValid}
-              handleSubmit={(handleSubmit, onSubmit)}
-            />
-          ) : formSection === 3 ? (
-            <Part3
-              register={register}
-              setFormSection={setFormSection}
-              emailIsValid={emailIsValid}
-              handleSubmit={(handleSubmit, onSubmit)}
-            />
-          ) : formSection === 4 ? (
-            <Part4 register={register} setFormSection={setFormSection} />
-          ) : (
-            <Success />
-          )}
+
+          <Part1
+            register={register}
+            setFormSection={setFormSection}
+            emailIsValid={emailIsValid}
+            handleSubmit={handleSubmit}
+            onSubmit={onSubmit}
+            visible={formSection === 1}
+          />
+          <Part2
+            register={register}
+            setFormSection={setFormSection}
+            handleSubmit={handleSubmit}
+            onSubmit={onSubmit}
+            visible={formSection === 2}
+          />
+          <Part3
+            register={register}
+            setFormSection={setFormSection}
+            handleSubmit={handleSubmit}
+            onSubmit={onSubmit}
+            visible={formSection === 3}
+          />
+          <Part4
+            register={register}
+            setFormSection={setFormSection}
+            handleSubmit={handleSubmit}
+            onSubmit={onSubmit}
+            visible={formSection === 4}
+          />
+          <Success />
         </form>
       </div>
     </Container>
@@ -61,24 +75,32 @@ function Part1({
   emailIsValid,
   handleSubmit,
   onSubmit,
+  visible,
 }) {
   return (
-    <div className="part1 form--section">
+    <div
+      className="part1 form--section"
+      style={{
+        opacity: visible ? "1" : "0",
+        pointerEvents: visible ? "all" : "none",
+        display: visible ? "flex" : "none",
+      }}
+    >
       <div className="form--input__wrapper full">
-        <label htmlFor="firstName" className="form--input--label capitalize">
-          first name
+        <label htmlFor="name" className="form--input--label capitalize">
+        	name
         </label>
         <input
-          name="firstName"
+          name="name"
           ref={register}
           type="text"
           className="form--input"
-          id="firstName"
+          id="name"
         />
       </div>
       <div className="form--input__wrapper full">
-        <label htmlFor="lastName" className="form--input--label capitalize">
-          last name
+        <label htmlFor="phone" className="form--input--label capitalize">
+          phone number
         </label>
         <input
           name="lastName"
@@ -137,22 +159,30 @@ function Part1({
       </div>
       <div className="form--submit__wrapper full">
         <button
+		type="submit"
           className="form--skip capitalize"
           onClick={handleSubmit(onSubmit)}
         >
           finish later
         </button>
-        <button className="form--submit" onClick={() => setFormSection(2)}>
-          2/4 <FontAwesomeIcon icon="arrow-right" />
+        <button type="button" className="form--submit capitalize" onClick={() => setFormSection(2)}>
+          next <FontAwesomeIcon icon="arrow-right" />
         </button>
       </div>
     </div>
   );
 }
 
-function Part2({ register, setFormSection, handleSubmit, onSubmit }) {
+function Part2({ register, setFormSection, handleSubmit, onSubmit, visible }) {
   return (
-    <div className="part2 form--section">
+    <div
+      className="part2 form--section"
+      style={{
+        opacity: visible ? "1" : "0",
+        pointerEvents: visible ? "all" : "none",
+        display: visible ? "flex" : "none",
+      }}
+    >
       <div className="form--input__wrapper full">
         <label htmlFor="campaignName" className="form--input--label capitalize">
           what is the campaign name?
@@ -199,20 +229,28 @@ function Part2({ register, setFormSection, handleSubmit, onSubmit }) {
         <button
           className="form--skip capitalize"
           onClick={handleSubmit(onSubmit)}
+		  type="submit"
         >
           finish later
         </button>
-        <button className="form--submit" onClick={() => setFormSection(3)}>
-          2/4 <FontAwesomeIcon icon="arrow-right" />
+        <button type="button" className="form--submit capitalize" onClick={() => setFormSection(3)}>
+          next <FontAwesomeIcon icon="arrow-right" />
         </button>
       </div>
     </div>
   );
 }
 
-function Part3({ register, setFormSection, handleSubmit, onSubmit }) {
+function Part3({ register, setFormSection, handleSubmit, onSubmit, visible }) {
   return (
-    <div className="part3 form--section">
+    <div
+      className="part3 form--section"
+      style={{
+        opacity: visible ? "1" : "0",
+        pointerEvents: visible ? "all" : "none",
+        display: visible ? "flex" : "none",
+      }}
+    >
       <div className="form--input__wrapper full">
         <label
           htmlFor="campaignExplanation"
@@ -233,20 +271,28 @@ function Part3({ register, setFormSection, handleSubmit, onSubmit }) {
         <button
           className="form--skip capitalize"
           onClick={handleSubmit(onSubmit)}
+		  type="submit"
         >
           finish later
         </button>
-        <button className="form--submit" onClick={() => setFormSection(4)}>
-          2/4 <FontAwesomeIcon icon="arrow-right" />
+        <button type="button"  className="form--submit capitalize" onClick={() => setFormSection(4)}>
+          next <FontAwesomeIcon icon="arrow-right" />
         </button>
       </div>
     </div>
   );
 }
 
-function Part4({ register, setFormSection }) {
+function Part4({ register, setFormSection, handleSubmit, onSubmit, visible }) {
   return (
-    <div className="part4 form--section">
+    <div
+      className="part4 form--section"
+      style={{
+        opacity: visible ? "1" : "0",
+        pointerEvents: visible ? "all" : "none",
+        display: visible ? "flex" : "none",
+      }}
+    >
       <div className="form--input__wrapper half">
         <label htmlFor="shirtChoice" className="form--input--label capitalize">
           shirt choice:
@@ -326,13 +372,13 @@ function Part4({ register, setFormSection }) {
         ></textarea>
       </div>
       <div className="form--submit__wrapper full">
-        <button className="form--skip capitalize">finish later</button>
         <button
           type="submit"
-          className="form--submit"
-          onClick={() => setFormSection(5)}
+          className="form--submit capitalize"
+          onClick={handleSubmit(onSubmit)}
+		  type="submit"
         >
-          2/4 <FontAwesomeIcon icon="arrow-right" />
+          complete <FontAwesomeIcon icon="arrow-right"/>
         </button>
       </div>
     </div>

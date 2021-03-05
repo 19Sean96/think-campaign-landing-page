@@ -2,7 +2,7 @@
     background-color: $white-2;
     border-radius: 32px;
     box-shadow: 0 -9px 20px rgba(0,0,0,.1);
-    padding: 110px 100px 60px 100px;
+    padding: 80px 85px 60px 85px;
     width: 100%;
     transition: .33s all ease-in;
     &__wrapper {
@@ -120,11 +120,11 @@
         width: 100%;
     }
     .half {
-        width: 40%;
+        width: 35%;
     }
 
     @media screen and (max-width: 1600px) {
-        padding: 88px 40px 48px 40px;
+        padding: 65px 40px 48px 40px;
     }
     @media screen and (max-width: 1500px) {
         &__wrapper {
@@ -144,7 +144,8 @@
                 margin: 0 0 15px 10px;
             }
         }
-        &--submit {
+        &--submit,
+        &--skip {
             font-size: 22.5px;
 
         }

@@ -7,6 +7,14 @@ import Testimonials from '../components/Sections/Testimonials'
 import Form from '../components/Sections/Form'
 import Footer from '../components/Sections/Footer'
 export default function Home() {
+
+  const sendConfirmationEmail = async (data) => {
+    const res = await fetch('/api/sendConfirmation', {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    })
+  }
   return (
     <div className="container">
       <Head>
@@ -40,7 +48,7 @@ export default function Home() {
       <Landing />
       <Details />
       {/* <Testimonials /> */}
-      <Form />
+      <Form sendConfirmationEmail={sendConfirmationEmail}/>
       <Footer />
     </div>
   )
