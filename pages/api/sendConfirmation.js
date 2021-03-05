@@ -14,6 +14,8 @@ export default async (req, res) => {
         campaignPurpose,
         campaignExplanation,
         shirtChoice,
+        colorChoice,
+        additionalComments
         // uploadArtwork
     } = req.body
 	console.log("Here IS THE PAYLOAD", (req.body));
@@ -31,19 +33,21 @@ export default async (req, res) => {
 			subject: "Hello ✔", // Subject line
 			text: "Hello world?", // plain text body
 			html: `<div>
-                <h1>Thank you for your purchase, ${name} your appointment at 7:13 PM, on 12/29/2020</p>!</h1>
-                <p>We have you scheduled in for your app
-                <p>We will reach out to you 5 minutes prior at the number you provided us to confirm your appointment: ${phone}</p>
-                <p>Speak to you soon!</p>
-        
-                <div>
-                  <h2>Purchase Details</h2>
-                  <ul>
-                    <li>Purchase Total: $429</li>
-                    <li>Package: Standard</li>
-                    <li>Initial Appointment Time: 7:13 PM, 12/29/2020</li>
-                  </ul>
-                </div>
+                <h1>New Campaign Request</h1>
+                <ul>
+                <li><strong>Customer's Name:</strong> ${name}</li>
+                <li><strong>Customer's Email:</strong> ${email}</li>
+                <li><strong>Customer's Phone:</strong> ${phone}</li>
+                <li><strong>Campaign Name:</strong> ${campaignName}</li>
+                <li><strong>Cause For Campaign:</strong> ${cause}</li>
+                <li><strong>Campaign Intro/Tagline:</strong> ${campaignIntro}</li>
+                <li><strong>Campaign Purpose:</strong> ${campaignPurpose}</li>
+                <li><strong>Campaign Explanation:</strong> ${campaignExplanation}</li>
+                <li><strong>Shirt Choice:</strong> ${shirtChoice}</li>
+                <li><strong>Color Choice:</strong> ${colorChoice}</li>
+                <li><strong>Comments, Questions & Concerns:</strong> ${additionalComments}</li>
+
+                </ul>
               </div>`,
 		};
     

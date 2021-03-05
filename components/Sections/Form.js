@@ -404,15 +404,15 @@ function Part4({ register, setFormSection, handleSubmit, onSubmit, visible }) {
 			</div>
 			<div className="form--input__wrapper half">
 				<label
-					htmlFor="quantity"
+					htmlFor="colorChoice"
 					className="form--input--label capitalize"
 				>
 					color choice:
 				</label>
 				<select
 					ref={register}
-					name="quantity"
-					id="quantity"
+					name="colorChoice"
+					id="colorChoice"
 					className="form--input"
 				>
 					<option value="">Select... </option>
@@ -441,15 +441,15 @@ function Part4({ register, setFormSection, handleSubmit, onSubmit, visible }) {
 			</div> */}
 			<div className="form--input__wrapper full">
 				<label
-					htmlFor="campaignExplanation"
+					htmlFor="additionalComments"
 					className="form--input--label capitalize"
 				>
-					why do you want to start a campaign?
+					Comments, questions or concerns:
 				</label>
 				<textarea
 					ref={register}
-					name="campaignExplanation"
-					id="campaignExplanation"
+					name="additionalComments"
+					id="additionalComments"
 					cols="30"
 					rows="10"
 					className="form--input"
