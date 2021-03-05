@@ -79,7 +79,7 @@
             width: 64%;
             min-width: 550px;
             // box-shadow: 0 7px 22px rgba(0,0,0,.2);
-
+            height: auto;
             -webkit-filter: drop-shadow(0px 7px 25px rgba(0,0,0,0.2));
             filter: url(#drop-shadow);
             -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#C3C3C3')";
@@ -89,6 +89,7 @@
                 position: relative;
                 // width: 60%;
                 display: flex;
+                align-items: center;
                 margin: 2px 0;
                 #rocket {
                     position: absolute;
