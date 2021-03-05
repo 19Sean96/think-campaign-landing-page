@@ -247,7 +247,7 @@ function Part1({
 					className="form--submit capitalize"
 					onClick={handleSubmit(onSubmit)}
 				>
-					start campaign
+					get started
 				</button>
 				{/* <button
 					type="button"
