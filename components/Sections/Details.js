@@ -45,12 +45,12 @@ const Details = (props) => {
 								<h1 className="details--step--number">
 									{i + 1}
 								</h1>
-								<h4 className="details--step--name uppercase">
+								<h5 className="details--step--name uppercase">
 									{step.name}
-								</h4>
-								<h5 className="details--step--description">
-									{step.description}
 								</h5>
+								<h6 className="details--step--description">
+									{step.description}
+								</h6>
 							</div>
 						);
 					})}

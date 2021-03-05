@@ -5,6 +5,8 @@
     padding: 80px 85px 60px 85px;
     width: 100%;
     transition: .33s all ease-in;
+    position: relative;
+    z-index: 50;
     &__wrapper {
         grid-column: 4/10;
         margin-bottom: 200px;

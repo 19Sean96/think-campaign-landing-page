@@ -24,7 +24,7 @@ const Landing = (props) => {
 							risk. what are you waiting for?
 						</h4>
 						<div className="landing--cta__container">
-							<Link href="">
+							<Link href="#">
 								<a
 									className="landing--cta capitalize"
 									id="getStarted"
@@ -32,7 +32,7 @@ const Landing = (props) => {
 									get started <FontAwesomeIcon icon="chart-bar" />
 								</a>
 							</Link>
-							<Link href="">
+							<Link href="#">
 								<a
 									className="landing--cta capitalize"
 									id="previousCampaigns"

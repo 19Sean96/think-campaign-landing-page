@@ -14,8 +14,9 @@
         position: relative;
         z-index: 25;
         grid-column: 2/12;
-        margin-bottom: 22px;
+        margin-bottom: 28px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         p {
             color: $white;
@@ -72,6 +73,93 @@
             position: absolute;
             bottom: 0;
             left: 0;
+        }
+    }
+
+
+    @media screen and (max-width: 1000px) {
+
+        &--content {
+
+            p {
+                font-size: 16px;
+            }
+
+            &--section {
+                h6 {
+                    font-size: 18px;
+                }
+            }
+        }
+        &--logo {
+            &__wrapper {
+                max-width: 100%;
+
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 775px) {
+        height: min-content;
+        &--content {
+            justify-content: space-around;
+        }
+        &__left {
+            width: 100%;
+            height: min-content;
+            order: 10;
+        }
+
+        &__center,
+        &__right {
+            width: 22.5%;
+            height: min-content;
+        }
+        &--copyright {
+            left: 50%;
+        }
+        &--social {
+            width: 36px;
+        }
+        &--logo {
+            &__wrapper {
+                position: relative;
+                transform: translate(-25%, -25%);
+                max-width: 30%;
+                margin-left: auto;
+                width: 100%;
+                svg {
+                    width: 100px;
+                }
+            }
+            &__third-party {
+               left: 0%;
+               transform: translate(0,110%);
+               width: 100px;
+               img {
+                   width: 100%;
+               }
+            }
+        }
+    }
+    @media screen and (max-width: 550px) {
+        &--content {
+            grid-column: 1/13;
+            p {
+                font-size: 12px;
+            }
+            &--section {
+                h6 {
+                    font-size: 14.4px;
+                }
+            }
+        }
+
+        &__left {
+            margin: 0 25px;
         }
     }
 }

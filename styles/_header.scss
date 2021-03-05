@@ -8,6 +8,13 @@
 
     &--left {
     }
+    &--right {
+
+    }
+
+    @media screen and (max-width: 675px) {
+        flex-direction: column;
+    }
 }
 
 .logo {
@@ -23,4 +30,6 @@
         font-family: eurostile-extended, serif;
         color: $black;
     }
+
+
 }
