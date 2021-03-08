@@ -90,13 +90,7 @@ const Faqs = (props) => {
   return (
     <Container>
       <div className="faqs">
-        <h3 className="faqs--title">FAQs</h3>
-        <h5 className="faqs--subtitle">
-          There is no cost for us to set up a webstore. Both the graphic
-          previews of products and the setup of online stores is being provided
-          free of charge for small businesses, artists, creatives and
-          organizations.
-        </h5>
+
         <section className="faqs--list">
           {/* {faqs.map((faq, i) => (
             <div className="faqs--item__wrapper" key={i}>
