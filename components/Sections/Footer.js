@@ -22,12 +22,21 @@ const Footer = (props) => {
               Arizona
             </p>
             <div className="footer--social__wrapper">
-              <div className="footer--social__facebook footer--social">
-                <FontAwesomeIcon icon={["fab", "facebook"]} />
-              </div>
-              <div className="footer--social__instagram footer--social">
-                <FontAwesomeIcon icon={["fab", "instagram"]} />
-              </div>
+              <Link href="https://www.facebook.com/thinkarizona">
+                <a>
+                  <div className="footer--social__facebook footer--social">
+                    <FontAwesomeIcon icon={["fab", "facebook"]} />
+                  </div>
+                </a>
+              </Link>
+
+              <Link href="https://www.instagram.com/thinktempe/">
+                <a>
+                  <div className="footer--social__instagram footer--social">
+                    <FontAwesomeIcon icon={["fab", "instagram"]} />
+                  </div>
+                </a>
+              </Link>
             </div>
             <p className="footer--copyright">
               ©2021 Think Graphics and Printing Solutions
