@@ -33,7 +33,7 @@ export default function Home() {
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Campaigns" />
         <meta property="og:description" content="Earn money & boost your brand or help a cause!" />
-        {/* <meta property="og:url" content="https://www.thinkpro.net/campaigns/"> */}
+        <meta property="og:url" content="https://campaigns.thinkpro.net/" />
         <meta property="og:image" content="https://www.thinkpro.net/wp-content/uploads/newHomepageAllServices.png" />
         <meta property="og:image:secure_url" content="https://www.thinkpro.net/wp-content/uploads/newHomepageAllServices.png" />
         <meta property="og:image:width" content="1199" />
@@ -44,11 +44,6 @@ export default function Home() {
         <meta property="twitter:title" content="Campaigns" />
         <meta property="twitter:description" content="Earn money & boost your brand or help a cause!" />
         <meta property="twitter:image" content="https://www.thinkpro.net/wp-content/uploads/newHomepageAllServices.png" />
-        {/* <script type="text/javascript">
-          window.ga=window.ga||function(){(ga.q = ga.q || []).push(arguments)};ga.l=+new Date;
-			    ga('create', "UA-2975406-1", 'auto');
-			    ga('send', 'pageview');
-		    </script> */}
         <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/tdy1pkk.css" />

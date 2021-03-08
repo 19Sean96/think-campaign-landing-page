@@ -34,6 +34,7 @@ export default async (req, res) => {
 	let info = {
 			from: EMAIL_NAME,
 			to: to,
+            cc: 'randy@thinkpro.net',
 			subject: "NEW CAMPAIGN REQUEST (2.0)", // Subject line
 			// text: "Hello world?", // plain text body
 			html: `<div>

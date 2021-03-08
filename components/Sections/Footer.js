@@ -61,7 +61,7 @@ const Footer = (props) => {
 					<div className="footer--content--section footer__right">
 						<h6 className="uppercase bold">resources</h6>
 						<h6 className="uppercase">
-							<Link href="https://www.thinkpro.net/campaigns/campaign-frequently-asked-questions/">
+							<Link href="/faqs">
 								<a>faq</a>
 							</Link>
 						</h6>

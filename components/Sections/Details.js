@@ -84,7 +84,7 @@ const Details = (props) => {
 												dy="7"
 												result="offsetblur"
 											/>
-											<feFlood flood-color="rgba(0,0,0,0.2)" />
+											<feFlood floodColor="rgba(0,0,0,0.2)" />
 											<feComposite
 												in2="offsetblur"
 												operator="in"
