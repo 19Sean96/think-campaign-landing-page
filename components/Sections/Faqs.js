@@ -1,4 +1,3 @@
-import FaqItem from "../Bits/FaqItem";
 import Container from "../Container";
 import Faq from "react-faq-component";
 const data = {
@@ -92,6 +91,7 @@ const Faqs = (props) => {
       <div className="faqs">
 
         <section className="faqs--list">
+            <img src="/girl-thinking.png" alt="A girl contemplating Think frequently asked questions."/>
           {/* {faqs.map((faq, i) => (
             <div className="faqs--item__wrapper" key={i}>
               <FaqItem faq={faq} />

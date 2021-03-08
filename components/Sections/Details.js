@@ -101,7 +101,7 @@ const Details = (props) => {
 					})}
 
 				<div className="details--steps--cta">
-					<Link href="https://www.thinkpro.net/campaigns/campaign-frequently-asked-questions/">
+					<Link href="/faqs">
 						<a className="details--steps--cta--link capitalize">
 							learn more
 						</a>

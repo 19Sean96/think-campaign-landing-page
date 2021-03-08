@@ -1,52 +1,38 @@
 .faqs {
     grid-column: 3/11;
-    margin: 75px 0 125px;
-    &--title {
-        text-align: center;
-        color: $black;
-        font-family: 'Gotham', sans-serif;
-        font-weight: bold;
-    }
-
-    &--subtitle {
-        text-align: center;
-        width: 75%;
-        color: $black;
-        margin: 0 auto;
-    }
+    margin: 200px 0 125px;
 
     &--list {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 55px 25px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -90%);
+            width: 30vw;
+            min-width: 450px;
+        }
     }
 
-    &--item {
-        position: relative;
-        z-index: 100;
-        box-shadow: 0 -12px 36px rgba(0,0,0,.12);
-        padding: 24px 40px;
-        background-color: $white-2;
+    @media screen and (max-width: 1200px) {
+        grid-column: 2/12;
+    }
+    @media screen and (max-width: 750px) {
+        grid-column: 1/13;
 
+        &--list {
 
-        &__wrapper {
-            margin: 15px calc(15px * 1.618)
+            img {
+                min-width: 350px;
+            }
         }
-
-        &--question {
-            margin: 0;
+    }
+    @media screen and (max-width: 400px) {
+        &--list {
+            img {
+                min-width: 275px;
+            }
         }
-
-        &__bot {
-            position: relative;
-            height: min-content;
-        }
-
-        &--answer {
-            position: relative;
-        }
-
     }
 }
 
@@ -61,7 +47,7 @@
         h2 {
             width: 100%;
             text-align: center;
-            padding: 15px 0;
+            padding: 15px 12px;
 
         }
     }

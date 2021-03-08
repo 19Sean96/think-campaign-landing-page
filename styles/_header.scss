@@ -31,5 +31,13 @@
         color: $black;
     }
 
+    @media screen and (max-width: 500px) {
+        width: 200px;
+
+        &--local {
+            font-size: calc(22.5px * .8);
+            margin-top: -12px;
+        }
+    }
 
 }
