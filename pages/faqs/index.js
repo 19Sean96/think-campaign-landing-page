@@ -4,12 +4,20 @@ import Header from "../../components/Sections/Header";
 // import Landing from '../components/Sections/Landing'
 // import Details from '../components/Sections/Details'
 // import Testimonials from '../components/Sections/Testimonials'
-import Faqs from '../../components/Sections/Faqs'
+import Faqs from "../../components/Sections/Faqs";
 import Footer from "../../components/Sections/Footer";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const faqs = (props) => {
+  useEffect(() => {
+    if (window.ga) {
+      if (location.hostname !== "localhost") {
+        window.ga("send", "pageview", location.href);
+      }
+    }
+  }, []);
+
   return (
     <div className="container">
       <Head>
@@ -58,8 +66,8 @@ const faqs = (props) => {
       </Head>
       <Header />
 
-      <Faqs /> 
-      
+      <Faqs />
+
       <Footer />
     </div>
   );

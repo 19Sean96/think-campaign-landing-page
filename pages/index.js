@@ -7,7 +7,7 @@ import Testimonials from '../components/Sections/Testimonials'
 import Form from '../components/Sections/Form'
 import Footer from '../components/Sections/Footer'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 export default function Home() {
 
   const [emailSuccess, setEmailSuccess] = useState(false)
@@ -24,6 +24,15 @@ export default function Home() {
       setEmailSuccess(true)
     }
   }
+
+  useEffect(() => {
+    if (window.ga) {
+
+      if (location.hostname !== "localhost") {
+        window.ga('send', 'pageview', location.href)
+      }
+    }
+  }, [])
   return (
     <div className="container">
       <Head>
