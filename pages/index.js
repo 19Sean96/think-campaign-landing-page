@@ -8,6 +8,7 @@ import Form from '../components/Sections/Form'
 import Footer from '../components/Sections/Footer'
 
 import { useState, useEffect } from 'react'
+
 export default function Home() {
 
   const [emailSuccess, setEmailSuccess] = useState(false)
@@ -27,9 +28,13 @@ export default function Home() {
 
   useEffect(() => {
     if (window.ga) {
-
+      console.log("DATA LAYER", window.dataLayer)
       if (location.hostname !== "localhost") {
-        window.ga('send', 'pageview', location.href)
+        // window.ga('send', 'pageview', location.href)
+        window.dataLayer.push({
+          event: 'pageview',
+          location: location.href
+        })
       }
     }
   }, [])
