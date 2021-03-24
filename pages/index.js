@@ -27,6 +27,8 @@ export default function Home() {
   }
 
   useEffect(() => {
+    console.log("THIS IS PAGE SPEC (root)")
+
     if (window.ga) {
       console.log("DATA LAYER", window.dataLayer)
       if (location.hostname !== "localhost") {

@@ -11,9 +11,16 @@ import { useState, useEffect } from "react";
 
 const faqs = (props) => {
   useEffect(() => {
+    // THIS NEEDS TO BE PUSHING DATALAYERS 
+    console.log("THIS IS PAGE SPEC (FAQ)")
+
     if (window.ga) {
       if (location.hostname !== "localhost") {
-        window.ga("send", "pageview", location.href);
+        // window.ga("send", "pageview", location.href);
+        window.dataLayer.push({
+          event: 'pageview',
+          location: location.href
+        })
       }
     }
   }, []);

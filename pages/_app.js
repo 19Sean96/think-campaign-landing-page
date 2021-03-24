@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
 
       // Initiate GTM
       useEffect(() => {
+        console.log("THIS IS COMING FROM util/gtm.js")
         const handleRouteChange = (url) => GTMPageView(url);
         Router.events.on('routeChangeComplete', handleRouteChange);
         return () => {
