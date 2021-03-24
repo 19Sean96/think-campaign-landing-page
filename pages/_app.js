@@ -1,6 +1,6 @@
 import Router from 'next/router';
 import React, {useEffect } from 'react';
-import { GTMPageView } from '../util/gtm'
+// import { GTMPageView } from '../util/gtm'
 import FacebookPixel from '../components/FacebookPixel'
 import '../styles/styles.scss'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -13,16 +13,16 @@ function MyApp({ Component, pageProps }) {
 
 
       // Initiate GTM
-      useEffect(() => {
-        console.log("THIS IS COMING FROM util/gtm.js")
-        const handleRouteChange = (url) => GTMPageView(url);
-        Router.events.on('routeChangeComplete', handleRouteChange);
-        return () => {
-            Router.events.off('routeChangeComplete', handleRouteChange);
-        };
-    }, []);
+    //   useEffect(() => {
+    //     console.log("THIS IS COMING FROM util/gtm.js")
+    //     const handleRouteChange = (url) => GTMPageView(url);
+    //     Router.events.on('routeChangeComplete', handleRouteChange);
+    //     return () => {
+    //         Router.events.off('routeChangeComplete', handleRouteChange);
+    //     };
+    // }, []);
 
-  const GTM_ID = process.env.GTM_ID
+  // const GTM_ID = process.env.GTM_ID
   return (
     <FacebookPixel>
       <Component {...pageProps} />
