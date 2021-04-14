@@ -43,6 +43,15 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          {/* <!-- Start of HubSpot Embed Code --> */}
+          <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/19600620.js"
+          ></script>
+          {/* <!-- End of HubSpot Embed Code --> */}
         </body>
       </Html>
     );
